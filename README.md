@@ -10,4 +10,5 @@ A little about me:
    * Using R programming to handle data science challenges
 
 [Link to my linkedin profile](https://www.linkedin.com/in/phat-truong-566b81345/)  
-A meme that captures how I currently feel about my university studies is ![](https://media.tenor.com/MGyRddHl280AAAAM/funnydogs-cute.gif)
+A meme that captures how I currently feel about my university studies is 
+![funny dog](https://media.tenor.com/MGyRddHl280AAAAM/funnydogs-cute.gif)
