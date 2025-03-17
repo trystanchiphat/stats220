@@ -1,10 +1,13 @@
-## stats220
-# This is my repo for STATS 220. 
+# stats220
+## This is my repo for STATS 220. 
 
 A little about me:
 
-- I am undertaking a degree in data science
-- I am taking STATS 220 because my degree requires
-- I am interested in learning about cutting-edge data technology
+1. I am undertaking a degree in **data science**
+2. I am taking *STATS 220* because my degree requires
+3. I am interested in learning about:
+   * Cutting-edge data technology
+   * Using R programming to handle data science challenges
 
-A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
+[Link to my linkedin profile](https://www.linkedin.com/in/phat-truong-566b81345/)  
+A meme that captures how I currently feel about my university studies is ![]([https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif](https://media.tenor.com/MGyRddHl280AAAAM/funnydogs-cute.gif))
