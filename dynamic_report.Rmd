@@ -1,0 +1,72 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.width = 10, fig.height = 7)
+library(tidyverse)
+
+```
+
+```{css}
+body {font-size: 11pt; font-family: Arial;}
+h1, h2 {font-weight: bold;}
+
+```
+
+```{r}
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQnxE8cKNO0qnBnXlysn8_ISWNs39qZ0XQXeq5M2dmmKW8Lu1WtAkwjdiEKwEy-5GpauygOQwxRKa15/pub?gid=1040061834&single=true&output=csv")
+latest_data <- logged_data %>%
+  rename(phone_usage = 2,
+         exercise_time = 3,
+         other_factors = 4,
+         age = 5)
+
+```
+
+## Daily Phone usage vs Exercise habits: Insights and Patterns
+
+This dynamic report explores the relationship between daily phone usage and time spend on exercise. We collect data on daily phone usage (in hours) and daily exercise duration (in minutes) for 25 days. Age and Other factors that may influence exercise duration each day are also considered. However, since this data is solely collected from one individual's observation (me), any patterns and insights obtained are not influenced by age. The dataset is stored in a data frame consisting of the following variables::
+
+-   **phone_usage**: Total time spent on the phone each day (numeric).
+
+-   **exercise_time**: Total time spent exercising each day (numeric).
+
+-   **other_factors**: Categorical data representing reasons affecting exercise time.
+
+-   **age**: Age ranges of participants (categorical).
+
+This dataset is a *rectangular data* format, meaning each column is a different variable. Each row represents a unique observation, and each cell is a single measurement.
+
+```{r}
+min_phone_usage <- latest_data$phone_usage %>%
+  min()
+max_phone_usage <- latest_data$phone_usage %>%
+  max()
+
+```
+
+The minimum phone usage recorded in the dataset is `r min_phone_usage` hours. This suggests that `r min_phone_usage` hours is the least amount of time spent on the phone on any given day.
+
+The maximum phone usage recorded in the dataset is `r max_phone_usage` hours. This suggests that `r max_phone_usage` hours is the highest amount of time spent on the phone on any given day.
+
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = phone_usage, fill = exercise_time)) +
+  labs(title = "Relationships between screen usage and exercise time",
+       subtitle = "Comparing Exercise Time Across Varying Levels of Screen Usage.",
+       x = "screen usage (hours per day)",
+       y = "Number of days")
+```
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = exercise_time, fill = other_factors)) +
+  labs(title = "Factors affecting exercise time",
+       subtitle = "Exploring whether exercise time is affected by other factors",
+       x = "Exercise time (minutes per day)",
+       y = "Number of days")
+```
+
