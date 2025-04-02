@@ -27,13 +27,13 @@ latest_data <- logged_data %>%
 
 ## Daily Phone usage vs Exercise habits: Insights and Patterns
 
-This dynamic report explores the relationship between daily phone usage and time spend on exercise. We collect data on daily phone usage (in hours) and daily exercise duration (in minutes) for 25 days. Age and Other factors that may influence exercise duration each day are also considered. However, since this data is solely collected from one individual's observation (me), any patterns and insights obtained are not influenced by age. The dataset is stored in a data frame consisting of the following variables::
+This dynamic report explores the relationship between daily phone usage and time spend on exercise. We collect data on daily phone usage (in hours) and daily exercise duration (in minutes) for 26 days. Age and Other factors that may influence exercise duration each day are also considered. However, since this data is solely collected from one individual's observation (me), any patterns and insights obtained are not influenced by age. The dataset is stored in a data frame consisting of the following variables:
 
 -   **phone_usage**: Total time spent on the phone each day (numeric).
 
 -   **exercise_time**: Total time spent exercising each day (numeric).
 
--   **other_factors**: Categorical data representing reasons affecting exercise time.
+-   **other_factors**: Categorical data representing outher factors affecting exercise time.
 
 -   **age**: Age ranges of participants (categorical).
 
